@@ -1,0 +1,245 @@
+:root {
+    --primary-color: #100f10;
+    --secondary-color: #f04e23;
+    --secondary-hover-color: #ed9f85;
+    --text-color: #333;
+    --background-color: #add6fa;
+    --input-border-color: #ccc;
+    --section-bg-color: #4cb1e3;
+    --footer-bg-color: #f04e23;
+    --footer-text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    padding: 70px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.3s;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    animation: fadeInUp 1s ease-in-out;
+    animation-delay: 0.6s;
+}
+
+.text-center {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(232, 28, 28, 0.1);
+}
+
+.navbar .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons .btn {
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav-buttons .btn:hover {
+    background-color: var(--secondary-hover-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-buttons .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(240, 78, 35, 0.5);
+}
+
+form {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-items {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.contact-section,
+.testimonial-section,
+.about-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--section-bg-color);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav-buttons {
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .contact-section,
+    .testimonial-section,
+    .about-section {
+        padding: 15px;
+    }
+}

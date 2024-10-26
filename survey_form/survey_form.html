@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="SF.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="spots_logo.jpeg" alt="Sports logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#testimonial">Testimonial</a></li>
+                <li><a href="#about">About Us</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn login-btn">Login</button>
+                <button class="btn signup-btn">Sign Up</button>
+            </div>
+        </nav>
+        <!-- home Section -->
+        <section id="home" class="home-section">
+            <header class="header">
+                <h1 id=" main-title" class="text-center">Sports Registration Survey Form</h1>
+                <p id="description" class="description-text-center">Give us some information for your registration</p>
+            </header>
+            <form id="survey-form">
+                <div class="form-items">
+                    <label id="name-label" for="name">
+                        Name
+                    </label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name"
+                        required />
+                </div>
+                <div class="form-items">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email"
+                        required />
+                </div>
+                <div class="form-items">
+                    <label id="age-label" for="number">Age <span class="clue">(Optional)</span></label>
+                    <input type="number" name="age" id="number" min="10" max="99" class="form-control"
+                        placeholder="Enter Age" />
+                </div>
+                <div class="form-items">
+                    <p>Which one of the below is your favourite sport ?</p>
+                    <select name="sports" id="dropdown" class="form-control" required>
+                        <option value="football">Football</option>
+                        <option value="cricket">Cricket</option>
+                        <option value="basketball">Basketball</option>
+                        <option value="chess">Chess</option>
+                        <option value="run">Running</option>
+                        <option value="other">Others</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <p>Would you pay the certain registration charge?</p>
+                    <label>
+                        <input type="radio" name="user-recommend" class="input-radio" value="yes" checked />
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" name="user-recommend" class="input-radio" value="no" />
+                        No
+                    </label>
+                    <label>
+                        <input type="radio" name="user-recommend" class="input-radio" value="may-be" />
+                        MayBe
+                    </label>
+                </div>
+                <div class="form-group">
+                    <p>Any comments or suggestions</p>
+                    <textarea name="comment" id="comments" class="input-textarea"
+                        placeholder="Enter Your Comments here ..."></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit" class="submit-button">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- contact section -->
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>For any queries or issues, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: support@sportsurvey.com</li>
+                <li>Phone: +123-456-7890</li>
+                <li>Address: 123 Sports Avenue, Kathmandu, Nepal</li>
+            </ul>
+        </section>
+        <!-- Testimonial section -->
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>We are a sports registration platform that helps athletes register for various sports events. Our mission
+                is to make the process fast, simple, and accessible to everyone.</p>
+        </section>
+
+        <!-- footer section -->
+        <footer class="footer">
+            <p>&copy; 2024 Sports Registration Survey. All rights reserved.</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>
