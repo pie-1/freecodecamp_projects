@@ -1,0 +1,6 @@
+here, we will create a virtual robot that simulates the task of picking up and
+delivering the parcels in virtual environment
+
+The robot will move around, collect parcel from the one location and drop then off at different location
+
+robot should efficiently navigate the environment and complete its deliveries without any human intervention
